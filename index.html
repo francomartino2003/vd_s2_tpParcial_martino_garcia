@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buenos Aires Ciudadd</title>
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+
+  <body>
+    <div class="boti">
+      <img class id="boti-img" src="img/boti/saludo.png" alt="">
+      <div class="dialogue" id="dialogue">
+        <small><p >Hola, me llamo Boti! Acompáñame a ver el trabajo del SUACI en 2021</p></small>
+      </div>
+    </div>
+    <div class="container">
+      <section >
+        <br><br>
+        <a href="https://buenosaires.gob.ar"><img class="img_ba" src="img/ba.png" alt="XD"></a>
+        <br><br><br>
+          <h1>Eficiencia y eficacia del <span class="main_color">SUACI</span></h1>
+          <p class="centrar_text">A partir de datos del 2021, analizamos cómo los ciudadanos perciben el servicio de atención ciudadana (SUACI) y 
+            cómo las mejoras en el servicio pueden mejorar la satisfacción del ciudadano y la confianza en 
+            el gobierno. Haciendo foco en la eficiencia y eficacia del mismo.</p>
+          <br>
+          
+          <h2><div class="punteo"></div>437 mil consultas resueltas en el 2021</h2>
+          <p>
+            A lo largo del año 2021, la ciudad ha recibido a través de diferentes medios y canales, alrededor de 600 mil consultas, quejas y reclamos. El servicio de atención ciudadana del gobierno de la ciudad de Buenos Aires, ha logrado manejarse para atender y resolver 437 mil de ellas de manera eficiente y eficaz. Aún quedan 161 mil en proceso.
+          </p>
+
+          <div class="chart" id="chart_1"></div>
+
+          <small><p>Fig. 1. Estado de contactos realizados a través de la línea 147 al Sistema Único de Atención Ciudadana (SUACI), CABA, 2021. Gráfico de Imanol Garcia y Franco Martino. Fuente: <a href="https://data.buenosaires.gob.ar/dataset/sistema-unico-atencion-ciudadana">data.buenosaires.gob.ar</a></p></small>
+
+          <br>
+          <h2>Resolvé tus problemas en 72 horas</h2>
+          <p>
+            Analizamos el tiempo promedio que tarda cada canal del SUACI en resolver una consulta. 
+            El canal de contacto más eficiente es la app de denuncia vial, resolviendo los problemas de los porteños en un tiempo promedio de 72 hs.      
+          </p>
+          <div  class="chart" id="chart_2"></div>
+          
+          <small><p>Fig. 2. Tiempo promedio de los canales del Sistema Único de Atención Ciudadana (SUACI) en resolver y cerrar un contacto, CABA, 2021. Gráfico de Imanol Garcia y Franco Martino. Fuente: <a href="https://data.buenosaires.gob.ar/dataset/sistema-unico-atencion-ciudadana">data.buenosaires.gob.ar </a></p></small>
+
+          <br>
+          <h2>Todos los barrios con más de 50% de consultas resueltas</h2>
+          <p>
+            Analizamos la proporción de consultas resueltas en cada barrio de la ciudad de Buenos Aires. 
+      En el primer puesto se encuentra Puerto Madero, con 87.4% de consultas resueltas, mientras que último en la lista se encuentra Villa Riachuelo, con 58.7%.
+      Sin embargo, no se observan diferencias significativas en la eficacia del servicio de atención ciudadana entre los diferentes barrios de la Ciudad.
+          </p>
+
+          <div  class="chart" id="chart_3"></div>
+
+          <small><p>Fig. 3. Proporción de contactos resueltos y cerrados gracias al Sistema Único de Atención Ciudadana (SUACI) por Barrio, CABA, 2021. Gráfico de Imanol Garcia y Franco Martino. Fuente: <a href="https://data.buenosaires.gob.ar/dataset/sistema-unico-atencion-ciudadana">data.buenosaires.gob.ar</a></p></small>
+
+        <br>
+
+          <p>
+            Los datos del 2021 evidencian que el Servicio de Atención Ciudadana (SUACI) de la Ciudad de Buenos Aires ha sido altamente eficiente y eficaz en la gestión de un gran número de consultas y quejas. 
+            Sin embargo, es claro que aún quedan desafíos por delante. Continuaremos trabajando arduamente para mejorar la calidad del servicio y fortalecer la confianza de los ciudadanos en el gobierno. 
+            En esta línea, seguiremos invirtiendo en tecnología y canales digitales, como la app de denuncia vial, que se han convertido en herramientas clave para mejorar la eficiencia del servicio y atender mejor las necesidades de todos los ciudadanos de Buenos Aires.
+          </p>
+      </section>
+      <hr>
+      <div class="legend">
+        <p>Fuente: <a href="https://data.buenosaires.gob.ar/dataset/sistema-unico-atencion-ciudadana">data.buenosaires.gob.ar</a></p>
+        <p>Franco Martino - Imanol Garcia</p>
+      </div>
+
+      <a href="https://buenosaires.gob.ar"><img class="img_ba_c" src="img/ba_footer.png" alt=""></a>
+      <br>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+    <script src="scripts/chart_1.js"></script>
+    <script src="scripts/chart_2.js"></script>
+    <script src="scripts/chart_3.js"></script>
+  </body>
+  <script>
+    console.log("ultima version")
+    const boti = document.querySelector('.boti');
+    const botiImg = document.getElementById("boti-img");
+    const dialogue = document.querySelector(".dialogue");
+    const text = document.getElementById("dialogue");
+    
+    window.addEventListener("scroll", function() {
+    console.log(window.scrollY);
+    dialogue.style.opacity = 1;
+    botiImg.style.marginLeft = '0';
+    if (window.scrollY > 140 && window.scrollY < 530) {
+      botiImg.src = "img/boti/feliz.png";
+      dialogue.innerHTML = "<small><p>Un año de muchísimo trabajo</p></small>";
+    } else if(window.scrollY > 772 && window.scrollY < 1150){
+      botiImg.src = "img/boti/superboti.png"; 
+      dialogue.innerHTML = "<small><p>Estamos siempre para ayudarte</p></small>";
+      botiImg.style.marginLeft = `-25px`;
+    } else if(window.scrollY > 1395){
+      botiImg.src = "img/boti/saludo.png";   
+      dialogue.innerHTML = "<small><p>Estes donde estes, la ciudad está siempre de tu lado</p></small>";
+    }else {
+      botiImg.src = "img/boti/normal.png";
+      dialogue.style.opacity = 0;
+    }
+    });
+
+    boti.addEventListener('click', () => {
+      dialogue.style.opacity = 1;
+      botiImg.src = "img/boti/normal.png";
+      botiImg.style.marginLeft = '0';
+      dialogue.innerHTML = "<small><p>Si prefieres, puedo irme para que prestes más atención <a href='#' onclick='borrarBoti()' style = 'color: blue' id='cancelar'>Si, por favor</a></p></small>";
+    });
+
+    function borrarBoti() {
+      event.preventDefault();
+      boti.style.display = 'none';
+    }
+  </script>
+</html>

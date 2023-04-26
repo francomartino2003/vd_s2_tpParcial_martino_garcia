@@ -1,0 +1,143 @@
+
+#chart{
+    overflow-y:auto;   
+}
+
+#chart svg{
+    max-width: initial;
+}
+
+h1, h2, h3, h4, h5, h6, text, P, label{
+    font-family: 'Montserrat', sans-serif;
+    color: #545152; 
+}
+
+h1{
+    font-weight: 700;
+    font-size: 2em;
+    text-align: center;
+}
+
+h2{
+    font-weight: 600;
+    border-left: 5px solid #FFD202;
+    padding-left: 10px; /* opcional para separar la barra del texto */
+}
+
+
+p{
+    font-weight: 400;
+}
+
+.main_color{
+    color: #FFD202;
+}
+
+.color_secundario{
+    color: "rgba(188, 188, 188, 1)";
+}
+
+.legend{
+    max-width: 750px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+
+.container{
+    max-width: 750px;
+    margin: auto;
+    position: relative;
+    padding: 20px;
+}
+
+.centrar_text{
+    text-align: center;
+}
+
+.img_ba{
+    max-width: 100px;
+    float: right;
+    opacity: 0.85;
+}
+
+.img_ba_c{
+    max-width: 200px;
+    display: block;
+    margin: auto;
+    opacity: 0.85;
+}
+
+figure {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.margen_inf{
+    margin-bottom: 20px;
+}
+
+.boti {
+    position: fixed;
+    left:8%;
+    top: 30%;
+    transform: translateY(-50%);
+  }
+  
+.boti img {
+    max-height: 100px;
+}
+  
+.dialogue {
+    position: absolute;
+    left: 70px;
+    top: -70px;
+    padding: 5px;
+    background-color: rgba(188, 188, 188, 0.25);
+    border-radius: 20px 20px 20px 0;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 1.2;
+    width: 145px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+
+.dialogue small p{
+    font-weight: 500;
+}
+
+@media (max-width: 1439px) {
+    .boti {
+      display: none;
+    }
+  }
+
+hr {
+    border: none; 
+    height: 1px; 
+    background-color: rgba(188, 188, 188, 0.7); 
+    opacity: 0.8; 
+  }
+
+a {
+    text-decoration: none; 
+    color: #545152;
+}
+
+  
+
+  
+
+
+
+
